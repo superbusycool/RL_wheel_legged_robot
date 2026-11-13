@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<robot name="wheelleg.SLDASM">
+
+  <link name="base_link">
+    <visual name="base_link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.STL" />
+      </geometry>
+      <material name="base_link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="base_link_geom_1">
+      <origin xyz="0.000354215502738952 0.07016406953334808 0.1025000031711534" rpy="0 0 0.0490194400918114" />
+      <geometry>
+        <box size="0.501393347978592 0.2741377508640289 0.1890000065322965" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0036928 0.076798 0.10512" rpy="0 0 0" />
+      <mass value="6.46258708" />
+      <inertia ixx="0.13113831" ixy="-0.00354532" ixz="0.0004529" iyy="0.05817305" iyz="0.00251602" izz="0.16289677" />
+    </inertial>
+  </link>
+
+  <link name="r_up_front_Link">
+    <visual name="r_up_front_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_up_front_Link.STL" />
+      </geometry>
+      <material name="r_up_front_Link_mat">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision name="r_up_front_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_up_front_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0624506427093028 -0.00434308076929035 0.0262268529698671" rpy="0 0 0" />
+      <mass value="0.1422212" />
+      <inertia ixx="0.00011081" ixy="-0.00001989" ixz="-0.00016704" iyy="0.00051366" iyz="-0.00000822" izz="0.0004101" />
+    </inertial>
+  </link>
+
+  <link name="r_down_front_Link">
+    <visual name="r_down_front_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_down_front_Link.STL" />
+      </geometry>
+      <material name="r_down_front_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="r_down_front_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_down_front_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.091069583168871 0.00455019754702413 -0.0754235416645199" rpy="0 0 0" />
+      <mass value="0.31098153" />
+      <inertia ixx="0.00124631" ixy="0.0001305" ixz="-0.00141102" iyy="0.0029985" iyz="0.00010567" izz="0.00180225" />
+    </inertial>
+  </link>
+
+  <link name="r_wheel_Link">
+    <visual name="r_wheel_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_wheel_Link.STL" />
+      </geometry>
+      <material name="r_wheel_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="r_wheel_Link_geom_1">
+      <origin xyz="0.000079179555316543 0.015686151024156405 0" rpy="1.5707963267948963 0 0" />
+      <geometry>
+        <cylinder radius="0.067846" length="0.027838" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.000835633961176807 0.0202337439841367 0.000147846555887732" rpy="0 0 0" />
+      <mass value="0.87241577" />
+      <inertia ixx="0.0009067" ixy="0.00002644" ixz="0.00000469" iyy="0.00135075" iyz="-0.0000032" izz="0.00090349" />
+    </inertial>
+  </link>
+
+  <link name="r_up_rear_Link">
+    <visual name="r_up_rear_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_up_rear_Link.STL" />
+      </geometry>
+      <material name="r_up_rear_Link_mat">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision name="r_up_rear_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_up_rear_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0613025607376168 -0.010541706528322 0.0271599229115095" rpy="0 0 0" />
+      <mass value="0.1422212" />
+      <inertia ixx="0.00010253" ixy="-0.00002098" ixz="0.00015914" iyy="0.00051357" iyz="0.00000812" izz="0.00041847" />
+    </inertial>
+  </link>
+
+  <link name="r_down_rear_Link">
+    <visual name="r_down_rear_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_down_rear_Link.STL" />
+      </geometry>
+      <material name="r_down_rear_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="r_down_rear_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_down_rear_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0819347898977423 0.0293190778198564 -0.0682664284096684" rpy="0 0 0" />
+      <mass value="0.28900932" />
+      <inertia ixx="0.00107707" ixy="0.00009402" ixz="0.00120403" iyy="0.00255599" iyz="-0.00007644" izz="0.00151815" />
+    </inertial>
+  </link>
+
+  <link name="r_leg_end_Link">
+    <visual name="r_leg_end_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_leg_end_Link.STL" />
+      </geometry>
+      <material name="r_leg_end_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="r_leg_end_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/r_leg_end_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-1.15397004555413 -6.58177109953902 0.265167861992513" rpy="0 0 0" />
+      <mass value="0.06623394" />
+      <inertia ixx="0.00000988" ixy="2.7e-7" ixz="0" iyy="0.00001535" iyz="0" izz="0.00000987" />
+    </inertial>
+  </link>
+
+  <link name="l_up_front_Link">
+    <visual name="l_up_front_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_up_front_Link.STL" />
+      </geometry>
+      <material name="l_up_front_Link_mat">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision name="l_up_front_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_up_front_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0617372687799032 0.010639992051269 0.0261388483270221" rpy="0 0 0" />
+      <mass value="0.1422212" />
+      <inertia ixx="0.00011033" ixy="-0.00001991" ixz="-0.00016662" iyy="0.00051366" iyz="-0.0000082" izz="0.00041058" />
+    </inertial>
+  </link>
+
+  <link name="l_down_front_Link">
+    <visual name="l_down_front_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_down_front_Link.STL" />
+      </geometry>
+      <material name="l_down_front_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="l_down_front_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_down_front_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0906907508869663 -0.0136543197620584 -0.0747785475157406" rpy="0 0 0" />
+      <mass value="0.31098153" />
+      <inertia ixx="0.00125534" ixy="0.00004541" ixz="-0.0014179" iyy="0.003007" iyz="0.00003607" izz="0.00178472" />
+    </inertial>
+  </link>
+
+  <link name="l_wheel_Link">
+    <visual name="l_wheel_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_wheel_Link.STL" />
+      </geometry>
+      <material name="l_wheel_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="l_wheel_Link_geom_1">
+      <origin xyz="-0.00009132096286168966 -0.01809160355153932 -0.000014722347259521" rpy="1.5707963267948963 0 0" />
+      <geometry>
+        <cylinder radius="0.06784608644470894" length="0.0248382532596588" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.00119165876342464 -0.0202159111972007 0.00014636323075648" rpy="0 0 0" />
+      <mass value="0.87241577" />
+      <inertia ixx="0.00090594" ixy="0.0000182" ixz="0.00000434" iyy="0.00135158" iyz="0.00000362" izz="0.00090342" />
+    </inertial>
+  </link>
+
+  <link name="l_up_rear_Link">
+    <visual name="l_up_rear_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_up_rear_Link.STL" />
+      </geometry>
+      <material name="l_up_rear_Link_mat">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision name="l_up_rear_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_up_rear_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0621015633196969 0.00443707727210985 0.0270489807136169" rpy="0 0 0" />
+      <mass value="0.1422212" />
+      <inertia ixx="0.00010196" ixy="-0.00002101" ixz="0.00015857" iyy="0.00051357" iyz="0.00000809" izz="0.00041904" />
+    </inertial>
+  </link>
+
+  <link name="l_down_rear_Link">
+    <visual name="l_down_rear_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_down_rear_Link.STL" />
+      </geometry>
+      <material name="l_down_rear_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="l_down_rear_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_down_rear_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0839698102767228 -0.0210091472520055 -0.068854266834408" rpy="0 0 0" />
+      <mass value="0.28900932" />
+      <inertia ixx="0.00105505" ixy="0.00005592" ixz="0.00120215" iyy="0.00255986" iyz="-0.00004395" izz="0.00153631" />
+    </inertial>
+  </link>
+
+  <link name="l_leg_end_Link">
+    <visual name="l_leg_end_Link_geom_0">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_leg_end_Link.STL" />
+      </geometry>
+      <material name="l_leg_end_Link_mat">
+        <color rgba="0.75294510 0.75294510 0.75294510 1"/>
+      </material>
+    </visual>
+    <collision name="l_leg_end_Link_geom_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/l_leg_end_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.00092250707080721 0.0184175024284219 -9.69502256253918e-14" rpy="0 0 0" />
+      <mass value="0.06623394" />
+      <inertia ixx="0.00000988" ixy="2.7e-7" ixz="0" iyy="0.00001535" iyz="0" izz="0.00000987" />
+    </inertial>
+  </link>
+
+  <joint name="joint_r_up_front" type="revolute">
+    <parent link="base_link" />
+    <child link="r_up_front_Link" />
+    <origin xyz="0.06005 -0.099445 0.134" rpy="0 0 0" />
+    <axis xyz="0.050026 -0.99875 0" />
+    <limit lower="-1.92" upper="0" effort="20" />
+  </joint>
+
+  <joint name="joint_r_down_front" type="revolute">
+    <parent link="r_up_front_Link" />
+    <child link="r_down_front_Link" />
+    <origin xyz="0.13931972044302 -0.027564919939695 0.0593333016475463" rpy="0 0 0" />
+    <axis xyz="0.0500258936199732 -0.998747921133017 0" />
+    <limit lower="-0.5" upper="2.6" />
+  </joint>
+
+  <joint name="joint_r_wheel" type="continuous">
+    <parent link="r_down_front_Link" />
+    <child link="r_wheel_Link" />
+    <origin xyz="-0.189706579474554 -0.0660729697328692 -0.159179227208673" rpy="0 0 0" />
+    <axis xyz="0.0500258936199546 -0.998747921133018 0" />
+  </joint>
+
+  <joint name="joint_r_up_rear" type="revolute">
+    <parent link="base_link" />
+    <child link="r_up_rear_Link" />
+    <origin xyz="-0.049112 -0.11893 0.134" rpy="0 0 0" />
+    <axis xyz="0.050026 -0.99875 0" />
+    <limit lower="0" upper="2.1" effort="20" />
+  </joint>
+
+  <joint name="joint_r_down_rear" type="revolute">
+    <parent link="r_up_rear_Link" />
+    <child link="r_down_rear_Link" />
+    <origin xyz="-0.136800801700189 -0.0223715933522088 0.0593742575961919" rpy="0 0 0" />
+    <axis xyz="0.0500258936199567 -0.998747921133018 0" />
+    <limit lower="-2.4" upper="0.1" />
+  </joint>
+
+  <joint name="r_down_rear_Link_to_r_leg_end_Link" type="fixed">
+    <parent link="r_down_rear_Link" />
+    <child link="r_leg_end_Link" />
+    <origin xyz="1.34564090537277 6.60795179437621 -0.424388045151495" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <joint name="joint_l_up_front" type="revolute">
+    <parent link="base_link" />
+    <child link="l_up_front_Link" />
+    <origin xyz="0.042791 0.24512 0.134" rpy="0 0 0" />
+    <axis xyz="0.050026 -0.99875 0" />
+    <limit lower="-1.92" upper="0" effort="20" />
+  </joint>
+
+  <joint name="joint_l_down_front" type="revolute">
+    <parent link="l_up_front_Link" />
+    <child link="l_down_front_Link" />
+    <origin xyz="0.136026713730691 0.0398547592125489 0.0591382390617054" rpy="0 0 0" />
+    <axis xyz="0.0500258936199545 -0.998747921133018 0" />
+    <limit lower="-0.5" upper="2.6" />
+  </joint>
+
+  <joint name="joint_l_wheel" type="continuous">
+    <parent link="l_down_front_Link" />
+    <child link="l_wheel_Link" />
+    <origin xyz="-0.195432902735473 0.0467818689872246 -0.159090185938299" rpy="0 0 0" />
+    <axis xyz="0.0500258936199546 -0.998747921133018 0" />
+  </joint>
+
+  <joint name="joint_l_up_rear" type="revolute">
+    <parent link="base_link" />
+    <child link="l_up_rear_Link" />
+    <origin xyz="-0.067771534646377 0.253602249588882 0.134000000000622" rpy="0 0 0" />
+    <axis xyz="0.0500258936199549 -0.998747921133018 0" />
+    <limit lower="0" upper="2.1" effort="20" />
+  </joint>
+
+  <joint name="joint_l_down_rear" type="revolute">
+    <parent link="l_up_rear_Link" />
+    <child link="l_down_rear_Link" />
+    <origin xyz="-0.138532914178425 0.0100823911212968 0.0591267881631831" rpy="0 0 0" />
+    <axis xyz="0.0500258936199577 -0.998747921133018 0" />
+    <limit lower="-2.4" upper="0.1" />
+  </joint>
+
+  <joint name="l_down_rear_Link_to_l_leg_end_Link" type="fixed">
+    <parent link="l_down_rear_Link" />
+    <child link="l_leg_end_Link" />
+    <origin xyz="0.194366780062307 -0.0253083161451642 -0.159078735040469" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+</robot>
