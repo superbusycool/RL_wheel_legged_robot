@@ -1,0 +1,127 @@
+<mujoco model="wheelleg.SLDASM">
+  <compiler angle="radian" meshdir="meshes/" inertiafromgeom="auto" inertiagrouprange="3 3" />
+  <asset>
+    <mesh name="base_link" file="base_link.STL" />
+    <mesh name="r_up_front_Link" file="r_up_front_Link.STL" />
+    <mesh name="r_down_front_Link" file="r_down_front_Link.STL" />
+    <mesh name="r_wheel_Link" file="r_wheel_Link.STL" />
+    <mesh name="r_up_rear_Link" file="r_up_rear_Link.STL" />
+    <mesh name="r_down_rear_Link" file="r_down_rear_Link.STL" />
+    <mesh name="r_leg_end_Link" file="r_leg_end_Link.STL" />
+    <mesh name="l_up_front_Link" file="l_up_front_Link.STL" />
+    <mesh name="l_down_front_Link" file="l_down_front_Link.STL" />
+    <mesh name="l_wheel_Link" file="l_wheel_Link.STL" />
+    <mesh name="l_up_rear_Link" file="l_up_rear_Link.STL" />
+    <mesh name="l_down_rear_Link" file="l_down_rear_Link.STL" />
+    <mesh name="l_leg_end_Link" file="l_leg_end_Link.STL" />
+    <material name="base_link_mat" rgba="0.75294 0.75294 0.75294 1" specular="0" />
+    <material name="r_up_front_Link_mat" rgba="1 1 1 1" specular="0" />
+    <material name="r_down_front_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+    <material name="r_wheel_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+    <material name="r_up_rear_Link_mat" rgba="1 1 1 1" specular="0" />
+    <material name="r_down_rear_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+    <material name="r_leg_end_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+    <material name="l_up_front_Link_mat" rgba="1 1 1 1" specular="0" />
+    <material name="l_down_front_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+    <material name="l_wheel_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+    <material name="l_up_rear_Link_mat" rgba="1 1 1 1" specular="0" />
+    <material name="l_down_rear_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+    <material name="l_leg_end_Link_mat" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" specular="0" />
+  </asset>
+
+  <worldbody>
+    <body name="base_link" pos="0 0 0">
+      <inertial pos="-0.0036928 0.076798 0.10512" mass="6.46258708" fullinertia="0.13113831 0.05817305 0.16289677 -0.00354532 0.0004529 0.00251602"/>
+      <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="base_link_mat" type="mesh" mesh="base_link" />
+      <geom pos="0.000354215502738952 0.07016406953334808 0.1025000031711534" quat="0.9996996518476754 0 0 0.024507266180392312" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="base_link_geom_1" type="box" size="0.250696673989296 0.13706887543201446 0.09450000326614826" />
+      <body name="r_up_front_Link" pos="0.06005 -0.099445 0.134">
+        <joint name="joint_r_up_front" type="hinge" axis="0.050026 -0.99875 0" limited="true" range="-1.92 0" damping="0" frictionloss="0"/>
+        <inertial pos="0.0624506427093028 -0.00434308076929035 0.0262268529698671" mass="0.1422212" fullinertia="0.00011081 0.00051366 0.0004101 -0.00001989 -0.00016704 -0.00000822"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r_up_front_Link_mat" type="mesh" mesh="r_up_front_Link" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="r_up_front_Link_geom_1" type="mesh" mesh="r_up_front_Link" />
+        <body name="r_down_front_Link" pos="0.13931972044302 -0.027564919939695 0.0593333016475463">
+          <joint name="joint_r_down_front" type="hinge" axis="0.0500258936199732 -0.998747921133017 0" limited="true" range="-0.5 2.6" damping="0" frictionloss="0"/>
+          <inertial pos="-0.091069583168871 0.00455019754702413 -0.0754235416645199" mass="0.31098153" fullinertia="0.00124631 0.0029985 0.00180225 0.0001305 -0.00141102 0.00010567"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r_down_front_Link_mat" type="mesh" mesh="r_down_front_Link" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="r_down_front_Link_geom_1" type="mesh" mesh="r_down_front_Link" />
+          <body name="r_wheel_Link" pos="-0.189706579474554 -0.0660729697328692 -0.159179227208673">
+            <joint name="joint_r_wheel" type="hinge" axis="0.0500258936199546 -0.998747921133018 0" damping="0" frictionloss="0"/>
+            <inertial pos="-0.000835633961176807 0.0202337439841367 0.000147846555887732" mass="0.87241577" fullinertia="0.0009067 0.00135075 0.00090349 0.00002644 0.00000469 -0.0000032"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r_wheel_Link_mat" type="mesh" mesh="r_wheel_Link" />
+            <geom pos="0.000079179555316543 0.015686151024156405 0" quat="0.7071067811865476 0.7071067811865475 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="r_wheel_Link_geom_1" type="cylinder" size="0.067846 0.013919" />
+          </body>
+        </body>
+      </body>
+      <body name="r_up_rear_Link" pos="-0.049112 -0.11893 0.134">
+        <joint name="joint_r_up_rear" type="hinge" axis="0.050026 -0.99875 0" limited="true" range="0 2.1" damping="0" frictionloss="0"/>
+        <inertial pos="-0.0613025607376168 -0.010541706528322 0.0271599229115095" mass="0.1422212" fullinertia="0.00010253 0.00051357 0.00041847 -0.00002098 0.00015914 0.00000812"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r_up_rear_Link_mat" type="mesh" mesh="r_up_rear_Link" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="r_up_rear_Link_geom_1" type="mesh" mesh="r_up_rear_Link" />
+        <body name="r_down_rear_Link" pos="-0.136800801700189 -0.0223715933522088 0.0593742575961919">
+          <joint name="joint_r_down_rear" type="hinge" axis="0.0500258936199567 -0.998747921133018 0" limited="true" range="-2.4 0.1" damping="0" frictionloss="0"/>
+          <inertial pos="0.0819347898977423 0.0293190778198564 -0.0682664284096684" mass="0.28900932" fullinertia="0.00107707 0.00255599 0.00151815 0.00009402 0.00120403 -0.00007644"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r_down_rear_Link_mat" type="mesh" mesh="r_down_rear_Link" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="r_down_rear_Link_geom_1" type="mesh" mesh="r_down_rear_Link" />
+          <body name="r_leg_end_Link" pos="1.34564090537277 6.60795179437621 -0.424388045151495">
+            <inertial pos="-1.15397004555413 -6.58177109953902 0.265167861992513" mass="0.06623394" fullinertia="0.00000988 0.00001535 0.00000987 2.7e-7 0 0"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r_leg_end_Link_mat" type="mesh" mesh="r_leg_end_Link" />
+            <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="r_leg_end_Link_geom_1" type="mesh" mesh="r_leg_end_Link" />
+          </body>
+        </body>
+      </body>
+      <body name="l_up_front_Link" pos="0.042791 0.24512 0.134">
+        <joint name="joint_l_up_front" type="hinge" axis="0.050026 -0.99875 0" limited="true" range="-1.92 0" damping="0" frictionloss="0"/>
+        <inertial pos="0.0617372687799032 0.010639992051269 0.0261388483270221" mass="0.1422212" fullinertia="0.00011033 0.00051366 0.00041058 -0.00001991 -0.00016662 -0.0000082"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="l_up_front_Link_mat" type="mesh" mesh="l_up_front_Link" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="l_up_front_Link_geom_1" type="mesh" mesh="l_up_front_Link" />
+        <body name="l_down_front_Link" pos="0.136026713730691 0.0398547592125489 0.0591382390617054">
+          <joint name="joint_l_down_front" type="hinge" axis="0.0500258936199545 -0.998747921133018 0" limited="true" range="-0.5 2.6" damping="0" frictionloss="0"/>
+          <inertial pos="-0.0906907508869663 -0.0136543197620584 -0.0747785475157406" mass="0.31098153" fullinertia="0.00125534 0.003007 0.00178472 0.00004541 -0.0014179 0.00003607"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="l_down_front_Link_mat" type="mesh" mesh="l_down_front_Link" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="l_down_front_Link_geom_1" type="mesh" mesh="l_down_front_Link" />
+          <body name="l_wheel_Link" pos="-0.195432902735473 0.0467818689872246 -0.159090185938299">
+            <joint name="joint_l_wheel" type="hinge" axis="0.0500258936199546 -0.998747921133018 0" damping="0" frictionloss="0"/>
+            <inertial pos="0.00119165876342464 -0.0202159111972007 0.00014636323075648" mass="0.87241577" fullinertia="0.00090594 0.00135158 0.00090342 0.0000182 0.00000434 0.00000362"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="l_wheel_Link_mat" type="mesh" mesh="l_wheel_Link" />
+            <geom pos="-0.00009132096286168966 -0.01809160355153932 -0.000014722347259521" quat="0.7071067811865476 0.7071067811865475 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="l_wheel_Link_geom_1" type="cylinder" size="0.06784608644470894 0.0124191266298294" />
+          </body>
+        </body>
+      </body>
+      <body name="l_up_rear_Link" pos="-0.067771534646377 0.253602249588882 0.134000000000622">
+        <joint name="joint_l_up_rear" type="hinge" axis="0.0500258936199549 -0.998747921133018 0" limited="true" range="0 2.1" damping="0" frictionloss="0"/>
+        <inertial pos="-0.0621015633196969 0.00443707727210985 0.0270489807136169" mass="0.1422212" fullinertia="0.00010196 0.00051357 0.00041904 -0.00002101 0.00015857 0.00000809"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="l_up_rear_Link_mat" type="mesh" mesh="l_up_rear_Link" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="l_up_rear_Link_geom_1" type="mesh" mesh="l_up_rear_Link" />
+        <body name="l_down_rear_Link" pos="-0.138532914178425 0.0100823911212968 0.0591267881631831">
+          <joint name="joint_l_down_rear" type="hinge" axis="0.0500258936199577 -0.998747921133018 0" limited="true" range="-2.4 0.1" damping="0" frictionloss="0"/>
+          <inertial pos="0.0839698102767228 -0.0210091472520055 -0.068854266834408" mass="0.28900932" fullinertia="0.00105505 0.00255986 0.00153631 0.00005592 0.00120215 -0.00004395"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="l_down_rear_Link_mat" type="mesh" mesh="l_down_rear_Link" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="l_down_rear_Link_geom_1" type="mesh" mesh="l_down_rear_Link" />
+          <body name="l_leg_end_Link" pos="0.194366780062307 -0.0253083161451642 -0.159078735040469">
+            <inertial pos="-0.00092250707080721 0.0184175024284219 -9.69502256253918e-14" mass="0.06623394" fullinertia="0.00000988 0.00001535 0.00000987 2.7e-7 0 0"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="l_leg_end_Link_mat" type="mesh" mesh="l_leg_end_Link" />
+            <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" name="l_leg_end_Link_geom_1" type="mesh" mesh="l_leg_end_Link" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <equality>
+    <connect name="mjcf-connect-r_wheel_Link-r_leg_end_Link" body1="r_wheel_Link" body2="r_leg_end_Link" anchor="0 0.1 0" />
+    <connect name="mjcf-connect-l_wheel_Link-l_leg_end_Link" body1="l_wheel_Link" body2="l_leg_end_Link" anchor="0 0.1 0" />
+  </equality>
+
+  <actuator>
+    <position name="joint_r_up_front_servo" joint="joint_r_up_front" kp="10" forcelimited="true" forcerange="-20 20" />
+    <position name="joint_r_down_front_servo" joint="joint_r_down_front" kp="100" />
+    <position name="joint_r_wheel_servo" joint="joint_r_wheel" kp="100" />
+    <position name="joint_r_up_rear_servo" joint="joint_r_up_rear" kp="10" forcelimited="true" forcerange="-20 20" />
+    <position name="joint_r_down_rear_servo" joint="joint_r_down_rear" kp="100" />
+    <position name="joint_l_up_front_servo" joint="joint_l_up_front" kp="10" forcelimited="true" forcerange="-20 20" />
+    <position name="joint_l_down_front_servo" joint="joint_l_down_front" kp="100" />
+    <position name="joint_l_wheel_servo" joint="joint_l_wheel" kp="100" />
+    <position name="joint_l_up_rear_servo" joint="joint_l_up_rear" kp="10" forcelimited="true" forcerange="-20 20" />
+    <position name="joint_l_down_rear_servo" joint="joint_l_down_rear" kp="100" />
+  </actuator>
+</mujoco>
